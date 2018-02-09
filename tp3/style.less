@@ -1,12 +1,32 @@
-/*
-body{
-	background-image: url("./images/backgroundLol.jpg");
-	size:100%;
+/*!
+ * Start Bootstrap - Thumbnail Gallery (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+@keyframes dropCards {
+ /* 0% {
+    transform: translate(-1000px, -100% );
+  }
+  100% {
+    transform: translate(0, 0);
+  }*/
+
+  from {
+    margin-left: 100%;
+    width: 100%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
-*/
+
+
+
 body {
     padding-top: 70px ; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-	background-image: url("./images/backgroundLol.jpg");
   .thumb{
    /* margin-bottom: 30px;
     max-width: 300px;
@@ -20,7 +40,7 @@ body {
 
     .thumbnail{
       background-color:black;
-      background-image: url(img/bgDosImage.jpg);
+      background-image: url(img/card_back.jpg);
       background-size: 270px 150px;
       transition: transform 1s;
       transition-timing-function: ease-in-out;
@@ -55,7 +75,4 @@ body {
 
 footer {
     margin: 50px 0; /*pq?*/
-}
-footer{
-	background-color: #f2f2f2;
 }

@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <script src="./node_modules/angular/angular.js">
+    </script>
+    <script src="./app.js"></script>
+</head>
+
+<body>
+    <div ng-app="demo" ng-controller="DemoController">
+
+        <hello-world name="World"></hello-world>
+        <hello-world name="Mars"></hello-world>
+
+        Choose a number:
+        <input type="number" ng-model="num">
+        <button ng-click="calculate()">Calculate</button>
+        <div> Result: {{result}}</div>
+    </div>
+</body>
+
+</html>
