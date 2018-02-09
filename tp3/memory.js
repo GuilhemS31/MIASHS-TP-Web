@@ -1,4 +1,6 @@
-angular.module('memory', [require('angular-resource')]
+//angular.module('memory', [require('angular-resource')]);
+
+angular.module('memory',[])
   .factory('LolChamp', ['$resource',
     function($resource) {
       return $resource('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion?locale=fr_FR&api_key=RGAPI-bb62d7e4-9f1b-4764-b829-a63e5f7ff2ca', {}, {
@@ -8,7 +10,7 @@ angular.module('memory', [require('angular-resource')]
         }
       });
     }
-  ]));
+  ]);
 	
 angular.module("memory")
   .controller('memoryController', ["$scope", "LolChamp", function caseChampCtrl($scope, LolChamp) {
