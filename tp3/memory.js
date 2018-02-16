@@ -22,7 +22,7 @@ angular.module("memory")
 			let nbChamp = Object.keys(champData).length;
 			let champSelect = Math.trunc(Math.random() * nbChamp);
 			
-			let champKey1 = champData[Object.keys(champData)[Math.trunc(Math.random() * nbChamp)]]["name"];
+			let champKey1 = champData[Object.keys(champData)[Math.trunc(Math.random() * nbChamp)]]["key"];
 			
 			$scope.ret.push({
 				name:champKey1,
@@ -35,7 +35,7 @@ angular.module("memory")
 			
 			champSelect = Math.trunc(Math.random() * nbChamp);
 			
-			let champKey2 = champData[Object.keys(champData)[Math.trunc(Math.random() * nbChamp)]]["name"];
+			let champKey2 = champData[Object.keys(champData)[Math.trunc(Math.random() * nbChamp)]]["key"];
 			
 			$scope.ret.push({
 				name:champKey2,
@@ -48,7 +48,7 @@ angular.module("memory")
 			
 			champSelect = Math.trunc(Math.random() * nbChamp);
 			
-			let champKey3 = champData[Object.keys(champData)[Math.trunc(Math.random() * nbChamp)]]["name"];
+			let champKey3 = champData[Object.keys(champData)[Math.trunc(Math.random() * nbChamp)]]["key"];
 			
 			$scope.ret.push({
 				name:champKey3,
