@@ -1,32 +1,67 @@
-//angular.module('memory', [require('angular-resource')]);
-
-angular.module('memory',[])
+angular.module('memory',['ngResource'])
   .factory('LolChamp', ['$resource',
     function($resource) {
       return $resource('./champions-info-image-stats-sort.json', {}, {
-      /*return $resource('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion?locale=fr_FR&api_key=RGAPI-bb62d7e4-9f1b-4764-b829-a63e5f7ff2ca', {}, {
-        */query: {
+      //return $resource('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion?locale=fr_FR&api_key=RGAPI-bb62d7e4-9f1b-4764-b829-a63e5f7ff2ca', {}, {
+        query: {
           method: 'GET',
           isArray: false
         }
       });
     }
   ]);
-	
+
 angular.module("memory")
-  .controller('memoryController', ["$scope", "LolChamp", function caseChampCtrl($scope, LolChamp) {
+  .controller('memoryController', ["$scope", "$http", "LolChamp", function caseChampCtrl($scope,$http, LolChamp) {
 		
-        //var champData = LolChamp.query();
+		$scope.ret=[];
 		
-        var champData = JSON.parse(ajaxFunction('./champions-info-image-stats-sort.json'));
-		var nbChamp = champData["data"].length();
-		var champSelect = Math.trunc( Math.random() * nbChamp);
-		$scope.champKey = champSelect["data"][champSelect]["name"];
-		/*
-		var champSelectNbSkin = this.champData["data"][this.champSelect]["skins"].length();
-		random sur nbSkins
-		*/
-		console.log($scope.champKey);
+        $http.get('champions-info-image-stats-sort.json').then(function(championJson) {
+			
+			let champData = championJson.data.data;
+			let nbChamp = Object.keys(champData).length;
+			let champSelect = Math.trunc(Math.random() * nbChamp);
+			
+			let champKey1 = champData[Object.keys(champData)[Math.trunc(Math.random() * nbChamp)]]["name"];
+			
+			$scope.ret.push({
+				name:champKey1,
+				skin:0 
+			});
+			$scope.ret.push({
+				name:champKey1,
+				skin:1 
+			});
+			
+			champSelect = Math.trunc(Math.random() * nbChamp);
+			
+			let champKey2 = champData[Object.keys(champData)[Math.trunc(Math.random() * nbChamp)]]["name"];
+			
+			$scope.ret.push({
+				name:champKey2,
+				skin:0 
+			});
+			$scope.ret.push({
+				name:champKey2,
+				skin:1 
+			});
+			
+			champSelect = Math.trunc(Math.random() * nbChamp);
+			
+			let champKey3 = champData[Object.keys(champData)[Math.trunc(Math.random() * nbChamp)]]["name"];
+			
+			$scope.ret.push({
+				name:champKey3,
+				skin:0 
+			});
+			$scope.ret.push({
+				name:champKey3,
+				skin:1 
+			});
+			
+		 });
+		 
+		 console.log($scope.ret);
       }]//,
     //template:
 );
