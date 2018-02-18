@@ -11,10 +11,11 @@ angular.module('memory',['ngResource'])
     }
   ]);
 
+ 
 angular.module("memory")
   .controller('memoryController', ["$scope", "$http", "LolChamp", function caseChampCtrl($scope,$http, LolChamp) {
 		
-		$scope.ret=[];
+		$scope.ret = [];
 		
         $http.get('champions-info-image-stats-sort.json').then(function(championJson) {
 			
@@ -59,9 +60,18 @@ angular.module("memory")
 				skin:1 
 			});
 			
+			var j = 0;
+		    var valI = '';
+		    var valJ = valI;
+		    var l = $scope.ret.length - 1;
+		    while(l > -1){
+			 	j = Math.floor(Math.random() * l);
+			 	valI = $scope.ret[l];
+			 	valJ = $scope.ret[j];
+				$scope.ret[l] = valJ;
+				$scope.ret[j] = valI;
+				l = l - 1;
+			}
 		 });
-		 
-		 console.log($scope.ret);
-      }]//,
-    //template:
+      }]
 );

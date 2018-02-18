@@ -58,15 +58,15 @@
     <!-- Page Content -->
     <div class="container">
 
-        <div class="row" ng-repeat="champ in ret">
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+        <div class="row" >
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb" ng-repeat="champ in ret">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champ.name}}_{{champ.skin}}.jpg" alt="">
                     <div class="champName">{{champ.name}}</div> 
                 </a>
 			</div>
-        </div>    
-
+        </div>  
+		
         <hr>
 
         <!-- Footer -->
