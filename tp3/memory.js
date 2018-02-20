@@ -75,3 +75,32 @@ angular.module("memory")
 		 });
       }]
 );
+
+/*
+Partie du code pas trouvé par le html, ne sais pas pourquoi
+*/
+angular.module("memory")
+  .controller('jeuMemory', ['$scope', function($scope) {
+    console.log("entrée Memory");
+	$scope.carteRet="";
+	if($scope.carteRet == ""){
+		console.log("1er carte");
+		$scope.carteRet = idCarte;
+		document.getElementById($scope.carteRet).style.transform("rotateY(180deg)");
+	}
+	else{
+		console.log("2eme carte");
+		if(idCarte.split("_")[0].equals($scope.carteRet.split("_")[0])){
+			//laisser cartes retournées
+			console.log("meme");
+			document.getElementById($scope.carteRet).style.transform("rotateY(180deg)");
+		}
+		else{
+			console.log("pas meme");	
+			//retourner cartes
+			document.getElementById($scope.carteRet).style.transform("rotateY(180deg)");
+			document.getElementById($scope.carteRet).style.transform("rotateY(180deg)");
+		}
+		carteRet = "";
+	}
+}]);
