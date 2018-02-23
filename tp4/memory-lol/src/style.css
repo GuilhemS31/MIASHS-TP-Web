@@ -1,0 +1,88 @@
+/*!
+ * Start Bootstrap - Thumbnail Gallery (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+@keyframes dropCards {
+  /* 0% {
+      transform: translate(-1000px, -100% );
+    }
+    100% {
+      transform: translate(0, 0);
+    }*/
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+body {
+  background-image: url("./images/backgroundLol.jpg");
+  /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+
+}
+body .thumb {
+  /* margin-bottom: 30px;
+    max-width: 300px;
+    min-width: 300px;*/
+
+  animation-name: dropCards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.8s;
+  animation-direction: alternate;
+}
+body .thumb .thumbnail {
+  background-color: black;
+  background-image: url("./images/reverseCard.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: transform 1s;
+  transition-timing-function: ease-in-out;
+  /* cursor: pointer;*/
+}
+body .thumb .thumbnail img {
+  opacity: 0;
+  transition: opacity 0.1s, transform 0.1s;
+  transition-delay: 0.5s;
+  /*width:300px;
+        height: 150px;*/
+
+}
+body .thumb .thumbnail .champName {
+  opacity: 0;
+  transition: opacity 0.1s, transform 0.1s;
+  transition-delay: 0.5s;
+  color: white;
+}
+body .thumb .thumbnail:hover {
+  transform: rotateY(180deg);
+}
+body .thumb .thumbnail:hover img {
+  opacity: 1;
+  transform: rotateY(180deg);
+}
+body .thumb .thumbnail:hover .champName {
+  opacity: 1;
+  transform: rotateY(180deg);
+}
+body .thumb .thumbnail:visited {
+  transform: rotateY(180deg);
+}
+body .thumb .thumbnail:visited img {
+  opacity: 1;
+  transform: rotateY(180deg);
+}
+body .thumb .thumbnail:visited .champName {
+  opacity: 1;
+  transform: rotateY(180deg);
+}
+footer {
+  color: white;
+  margin: 50px 0;
+  /*pq?*/
+
+}
