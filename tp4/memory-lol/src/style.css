@@ -3,22 +3,7 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-@keyframes dropCards {
-  /* 0% {
-      transform: translate(-1000px, -100% );
-    }
-    100% {
-      transform: translate(0, 0);
-    }*/
-  from {
-    margin-left: 100%;
-    width: 100%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
+ 
 body {
   background-image: url("./images/backgroundLol.jpg");
   /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
@@ -69,7 +54,7 @@ body .thumb .thumbnail:hover .champName {
   opacity: 1;
   transform: rotateY(180deg);
 }
-body .thumb .thumbnail:visited {
+body .thumb .thumbnail:active {
   transform: rotateY(180deg);
 }
 body .thumb .thumbnail:visited img {
@@ -79,10 +64,4 @@ body .thumb .thumbnail:visited img {
 body .thumb .thumbnail:visited .champName {
   opacity: 1;
   transform: rotateY(180deg);
-}
-footer {
-  color: white;
-  margin: 50px 0;
-  /*pq?*/
-
 }
