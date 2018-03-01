@@ -72,35 +72,28 @@ class Memory extends Component {
 	}
 	
 	isWin(){
-		console.log(this.state.bonnePaires);
 		if(this.state.bonnePaires == 3){
 			alert("Vous avez gagner !");
 			window.location.reload();
 		}
 	}
 	checkMemory(e,idCarte){
-		console.log("entrée Memory ");
 		var SidCarte = idCarte.toString();
-		console.log(idCarte + " vs " + this.state.clicked);
 		if(this.state.clicked == ""){
-			console.log("1er carte");
 			this.state.clicked = SidCarte;
 			//document.getElementById(this.state.clicked).style.transform("rotateY(180deg)");
 		}
 		else{
-			console.log("2eme carte");
 			if(SidCarte === this.state.clicked){
-				console.log("meme carte");
+				alert("Même carte sélectionée, en choisir une autre");
 			}
 			else{
 				if(SidCarte.split("_")[0] == this.state.clicked.split("_")[0]){
 					//laisser cartes retournées
-					console.log("meme champions");
 					//document.getElementById(this.state.clicked).style.transform("rotateY(180deg)");
 					this.state.bonnePaires += 1;
 				}
 				else{
-					console.log("pas meme");	
 					//retourner cartes
 					//document.getElementById(this.state.clicked).style.transform("rotateY(180deg)");
 					//document.getElementById(this.state.clicked).style.transform("rotateY(180deg)");
