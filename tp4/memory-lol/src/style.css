@@ -44,6 +44,7 @@ body .thumb .thumbnail .champName {
   color: white;
 }
 body .thumb .thumbnail:hover {
+  opacity: 1;
   transform: rotateY(180deg);
 }
 body .thumb .thumbnail:hover img {
