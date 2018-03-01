@@ -5,6 +5,5 @@ Angular :
 https://guilhems31.github.io/MIASHS-TP-Web/tp3/index.html
 
 React :
-Download projet git, aller dans /tp4/memory-lol, ouvrir un invite de commande et taper npm start
-Seul disfonctionnement : quand on a cliqué sur 2 cartes différentes,
-la 1ere carte cliquée ne sera re-révélé que si l'on clique dessus
+Download projet git, aller dans /tp4/memory-lol, ouvrir un invite de commande et taper npm start puis dnas un naviguateur localhost:3000
+Seul disfonctionnement : quand on a cliqué sur 2 cartes différentes, la 1ere carte cliquée ne sera re-révélé que si l'on clique dessus
